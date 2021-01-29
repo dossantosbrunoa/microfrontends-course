@@ -7,7 +7,7 @@ on:
     paths:
      - '02-dashboard/container/**'
 
-default:
+defaults:
   run:
     working-directory: '02-dashboard/container'
 
