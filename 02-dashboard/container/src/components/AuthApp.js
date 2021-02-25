@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 export default ({ onSignIn }) => {
+  console.log('AuthApp instantiated on container');
+  
   const ref = useRef(null);
   const history = useHistory();
 
@@ -21,8 +23,6 @@ export default ({ onSignIn }) => {
 
     history.listen(onParentNavigate);
   }, []);
-
-  console.log('AuthApp instantiated on container');
 
   return (
     <div ref={ref}/>
