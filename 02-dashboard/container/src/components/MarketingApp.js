@@ -21,6 +21,8 @@ export default () => {
     history.listen(onParentNavigate);
   }, []);
 
+  console.log('MarketingApp instantiated on container');
+
   return (
     <div ref={ref}/>
   );

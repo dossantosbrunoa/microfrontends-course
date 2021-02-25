@@ -22,6 +22,8 @@ export default ({ onSignIn }) => {
     history.listen(onParentNavigate);
   }, []);
 
+  console.log('AuthApp instantiated on container');
+
   return (
     <div ref={ref}/>
   );
