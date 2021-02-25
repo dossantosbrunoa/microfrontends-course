@@ -10,7 +10,6 @@ const generateClassName = createGenerateClassName({
 });
 
 export default ({ history }) => {
-  console.log('history on marketing',history);
   
   return (
     <div>

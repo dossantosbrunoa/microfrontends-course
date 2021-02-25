@@ -11,19 +11,31 @@ const generateClassName = createGenerateClassName({
 
 export default ({ onSignIn, history }) => {
   return (
+    // <div>
+    //   <StylesProvider generateClassName={generateClassName}>
+    //     <Router history={history}>
+    //       <Switch>
+    //         <Route path="/auth/signin">
+    //           <Signin onSignIn={onSignIn} />
+    //         </Route>
+    //         <Route path="/auth/signup">
+    //           <Signup onSignIn={onSignIn} />
+    //         </Route>
+    //       </Switch>
+    //     </Router>
+    //   </StylesProvider>
+    // </div>
     <div>
-      <StylesProvider generateClassName={generateClassName}>
-        <Router history={history}>
-          <Switch>
-            <Route path="/auth/signin">
-              <Signin onSignIn={onSignIn} />
-            </Route>
-            <Route path="/auth/signup">
-              <Signup onSignIn={onSignIn} />
-            </Route>
-          </Switch>
-        </Router>
-      </StylesProvider>
+      <Router history={history}>
+        <Switch>
+          <Route path="/auth/signin">
+            <div>SIGN IN</div>
+          </Route>
+          <Route path="/auth/signup">
+            <div>SIGN UP</div>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   )
 }

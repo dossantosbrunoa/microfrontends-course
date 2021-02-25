@@ -10,7 +10,7 @@ const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
   if(onNavigate) {
     history.listen(onNavigate);
   }
-  console.log('received on auth bootstrap',{ onSignIn, onNavigate, defaultHistory, initialPath })
+
   ReactDom.render(<App onSignIn={onSignIn} history={history}/>, el);
 
   return {
