@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
+const webpack = require('webpack');
 
 const prodConfig = {
   mode: 'production',
@@ -16,6 +17,9 @@ const prodConfig = {
       exposes: {
         './DashboardApp': './src/bootstrap'
       },
+    }),
+    new webpack.DefinePlugin({
+      __VUE_PROD_DEVTOOLS__: false,
     })
   ]
 }
